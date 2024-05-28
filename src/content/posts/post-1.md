@@ -8,6 +8,7 @@ image:
     url: 'https://docs.astro.build/assets/full-logo-dark.png'
     alt: 'The full Astro logo.'
 tags: ["astro", "blogging", "learning in public","dynamic"]
+slug: my-custom-slug/supports/slashes
 ---
 
 
