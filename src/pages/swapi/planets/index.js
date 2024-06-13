@@ -12,7 +12,7 @@ export async function GET() {
     }
 
     return new Response(
-        JSON.stringify(product), {
+        JSON.stringify(product,undefined,"\t"), {
         status: 200,
         headers: {
             "Content-Type": "application/json"

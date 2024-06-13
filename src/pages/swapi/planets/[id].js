@@ -13,7 +13,7 @@ export async function GET({ params }) {
     }
 
     return new Response(
-        JSON.stringify(product), {
+        JSON.stringify(product,undefined,"\t"), {
         status: 200,
         headers: {
             "Content-Type": "application/json"
