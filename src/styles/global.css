@@ -1,3 +1,7 @@
+:root {
+  --hamburger-higlight-color: hsl(14.45deg 100% 73.14%);
+}
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -35,19 +39,21 @@ h1 {
   cursor: pointer;
 }
 
-.hamburger .line {
+.hamburger .line {  
+  --height: 8px;
   display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
+  width: calc(var(--height)*5);
+  height: var(--height);
+  margin-bottom: calc(var(--height)*5/8);
+  border-radius: calc(var(--height)/2);
+  background-color: var(--hamburger-higlight-color);
 }
 
 .nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ff9776;
+  background-color: var(--hamburger-higlight-color);
   display: none;
   margin: 0;
 }
@@ -64,7 +70,7 @@ h1 {
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: var(--hamburger-higlight-color);
 }
 
 .expanded {
