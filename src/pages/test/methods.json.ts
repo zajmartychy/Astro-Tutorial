@@ -27,12 +27,14 @@ export const ALL: APIRoute = async ({ request }) => {
   const req = request;
   let req_headers = {};
   req.headers.forEach((val, key) => req_headers[key] = val);
+  var globs = import.meta.glob("../*");
+  var m1 = await globs["../404.astro"]();
 
   return new Response(JSON.stringify({
     method: req.method,
-    req_headers:req_headers
-    
-  },undefined,"\t"), {
+    req_headers: req_headers,
+    body: m1
+  }, undefined, "\t"), {
     headers: [
       ["Content-Type", "application/json"],
       ["Custom-Header", "ABC-123"]]
