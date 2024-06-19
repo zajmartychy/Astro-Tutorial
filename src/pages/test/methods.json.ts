@@ -25,14 +25,11 @@ export const POST: APIRoute = async ({ request }) => {
 
 export const ALL: APIRoute = async ({ request }) => {
   const req = request;
-  let text:string;
-  text = await req.text();
   let req_headers = {};
   req.headers.forEach((val, key) => req_headers[key] = val);
 
   return new Response(JSON.stringify({
     method: req.method,
-    body: text,
     req_headers:req_headers
     
   },undefined,"\t"), {
